@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
 }
 
 android {
@@ -43,4 +44,40 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'com.github.Kingcool759:KC_MVVMComponent:1.0.0'
+
+    implementation 'io.github.Kingcool759:maven-test:1.0.0-SNAPSHOT'
+
 }
+//task generateSourcesJar(type: Jar) {
+//    from android.sourceSets.main.java.srcDirs
+//    classifier 'sources'
+//}
+
+//// Finally publish the artifact
+//afterEvaluate {
+//    publishing {
+//        repositories {
+//            maven {
+//                url "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+////            if (ARTIFACT_VERSION.endsWith("SNAPSHOT")) {
+////                url "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+////            } else {
+////                url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+////            }
+//                credentials {
+//                    username "kingcool759"
+//                    password "368396delieZJW#"
+//                }
+//            }
+//        }
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//                artifact generateSourcesJar
+//                groupId "io.github.Kingcool759" //申请时填写的域名
+//                artifactId "maven-test"
+//                version "1.0.0-SNAPSHOT"
+//            }
+//        }
+//    }
+//}
